@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sorry My Love ❤️</title>
+
+<style>
+
+/* BASIC SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #160511, #4a0b2c, #210817);
+    color: #ffe0ec;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* PAGE SETTINGS */
+
+.page {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page.active {
+    display: flex;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CARD */
+
+.card {
+    width: 100%;
+    max-width: 700px;
+    padding: 40px 25px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,180,210,0.2);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* HEADINGS */
+
+h1 {
+    font-size: clamp(28px, 5vw, 43px);
+    color: #ffb6d0;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: clamp(22px, 4vw, 30px);
+    color: #ffc1d8;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin: 15px auto;
+    max-width: 600px;
+}
+
+/* BUTTONS */
+
+button {
+    padding: 14px 30px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 35px;
+    background: linear-gradient(135deg, #ff3984, #b91460);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(255,50,130,0.3);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #ff70a5;
+}
+
+/* HEART ANIMATION */
+
+.heart {
+    font-size: 75px;
+    margin: 20px;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* FLOATING HEARTS */
+
+.floating-heart {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    z-index: 0;
+    animation: floatUp 8s linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* CONTENT */
+
+.card {
+    position: relative;
+    z-index: 2;
+}
+
+.final-hearts {
+    font-size: 50px;
+    margin: 25px;
+}
+
+.small-text {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 600px) {
+
+    .card {
+        padding: 28px 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- PAGE 1 -->
+
+<section class="page active" id="page1">
+
+    <div class="heart">❤️</div>
+
+    <h1>Hiiii My Dear Love 💗</h1>
+
+    <p>
+        I made something special for you.
+        Please take a little time and open my heart.
+    </p>
+
+    <p>
+        There is something I really want to tell you,
+        my beautiful girl. 🥺
+    </p>
+
+    <button onclick="nextPage(2)">
+        Open My Heart ❤️
+    </button>
+
+</section>
+
+
+
+<!-- PAGE 2 -->
+
+<section class="page" id="page2">
+
+    <div class="card">
+
+        <div class="heart">💌</div>
+
+        <h1>For My Beautiful Girl</h1>
+
+        <p>
+            You are one of the most special people
+            in my life.
+        </p>
+
+        <p>
+            Every little moment with you means
+            so much to me.
+        </p>
+
+        <p>
+            Your smile makes my day beautiful.
+            Your happiness means everything to me.
+        </p>
+
+        <p>
+            I never want a small misunderstanding
+            to come between us.
+        </p>
+
+        <button onclick="nextPage(3)">
+            Continue My Love 💕
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- PAGE 3 -->
+
+<section class="page" id="page3">
+
+    <div class="card">
+
+        <h1>I'm Really Sorry 🥺</h1>
+
+        <div class="heart">❤️</div>
+
+        <p>
+            I know I made mistakes, and I accept them.
+            I'm truly sorry for hurting you.
+        </p>
+
+        <p>
+            Sometimes I may not express my feelings
+            properly, but I never want you to feel
+            unimportant.
+        </p>
+
+        <p>
+            I know saying sorry is not enough.
+            I want to show you through my actions
+            that I can do better.
+        </p>
+
+        <p>
+            You deserve love, respect, care and happiness.
+            I will try my best to understand you better.
+        </p>
+
+        <button onclick="nextPage(4)">
+            Read One More Thing 💗
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- PAGE 4 -->
+
+<section class="page" id="page4">
+
+    <div class="card">
+
+        <h1>If I Could Turn Back Time ⏳</h1>
+
+        <p>
+            If I could turn back time,
+            I would choose my words more carefully.
+        </p>
+
+        <p>
+            I would never want my anger or ego
+            to hurt the person I love.
+        </p>
+
+        <p>
+            I don't want to win an argument.
+            I want us to understand each other.
+        </p>
+
+        <p>
+            I want more smiles, more hugs,
+            more memories and more beautiful moments
+            with you.
+        </p>
+
+        <div class="heart">💗</div>
+
+        <h2>One Last Surprise For You ❤️</h2>
+
+        <button onclick="nextPage(5)">
+            Open Your Surprise 😘
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- PAGE 5 -->
+
+<section class="page" id="page5">
+
+    <div class="card">
+
+        <h1>One Last Thing, My Love ❤️</h1>
+
+        <p>
+            I wish I could be beside you right now
+            and give you the biggest hug. 🥺
+        </p>
+
+        <div class="final-hearts">
+            🫂 ❤️ 😘
+        </div>
+
+        <h1>Sending You a Big Hug 🤗</h1>
+
+        <p>
+            Close your eyes and imagine
+            that I'm holding your hands
+            and giving you the warmest hug.
+        </p>
+
+        <div class="heart">❤️</div>
+
+        <h1>I LOVE YOU SO MUCH! 💗</h1>
+
+        <p>
+            Even when we fight, my heart still chooses you.
+            I want to understand you, care for you
+            and create beautiful memories together.
+        </p>
+
+        <h2>Please Stay Happy, My Love! 🥺</h2>
+
+        <div class="final-hearts">
+            💋 💞 ♾️
+        </div>
+
+        <p>
+            I'm sorry for everything.
+            You mean more to me than words can explain.
+        </p>
+
+        <button onclick="sendMessage()">
+            Let's Talk, My Love 💌
+        </button>
+
+        <p class="small-text">
+            Made with all my heart, just for you. ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* PAGE NAVIGATION */
+
+function nextPage(number) {
+
+    document.querySelectorAll(".page").forEach(function(page) {
+        page.classList.remove("active");
+    });
+
+    document.getElementById("page" + number).classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    createHearts();
+
+}
+
+
+/* FLOATING HEARTS */
+
+function createHearts() {
+
+    const symbols = ["❤️", "💗", "💕", "🌸", "💖", "💘"];
+
+    for (let i = 0; i < 15; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.className = "floating-heart";
+
+        heart.innerText = symbols[
+            Math.floor(Math.random() * symbols.length)
+        ];
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+            (15 + Math.random() * 25) + "px";
+
+        heart.style.animationDelay =
+            (Math.random() * 2) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(function() {
+            heart.remove();
+        }, 9000);
+
+    }
+
+}
+
+
+/* WHATSAPP MESSAGE */
+
+function sendMessage() {
+
+    // Replace with your WhatsApp number and country code
+    const phone = "91YOUR_NUMBER";
+
+    const message = encodeURIComponent(
+        "I saw your beautiful apology website ❤️🥺 Let's talk, my love."
+    );
+
+    window.open(
+        "https://wa.me/" + phone + "?text=" + message,
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
